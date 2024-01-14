@@ -3,17 +3,14 @@ using UnityEngine.UI;
 
 public class ModelSwitcher : MonoBehaviour
 {
-    public GameObject model1; // Reference to the first 3D model
-    public GameObject model2; // Reference to the second 3D model
+    public GameObject model1, model2;
 
-    public GameObject uiModel1;
-    public GameObject uiModel2;
+    public GameObject uiModel1, uiModel2;
 
-    private GameObject currentModel; // Reference to the currently active model
+    private GameObject currentModel;
 
     private void Start()
     {
-        // Set the initial model
         currentModel = model1;
         model1.SetActive(true);
         uiModel1.SetActive(true);
@@ -23,7 +20,6 @@ public class ModelSwitcher : MonoBehaviour
 
     public void SwitchModel()
     {
-        // Toggle between models
         if (currentModel == model1)
         {
             model1.SetActive(false);
